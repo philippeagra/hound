@@ -115,7 +115,7 @@ func main() {
 
 	flagConf := flag.String("conf", "config.json", "")
 	flagAddr := flag.String("addr", ":6080", "")
-	flagDev := flag.Bool("dev", false, "")
+	flagDev := flag.Bool("dev", true, "")
 
 	flag.Parse()
 

@@ -11,7 +11,7 @@ var lib = {
     },
 
     UrlToRepo: function(repo, path, line, rev) {
-        var url = repo.url.replace(/\.git$/, ''),
+        var url = repo.url.replace(/\.git$/, '').replace(/\/\/[^@]+@/, '//'),
             pattern = repo['url-pattern'],
             filename = path.substring(path.lastIndexOf('/') + 1),
             anchor = line ? lib.ExpandVars(pattern.anchor, { line : line, filename : filename }) : '';
